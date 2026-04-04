@@ -1,11 +1,11 @@
-# COGS 205B **Computational lab skills**
+# COGS 205B — **Computational lab skills**
 
 ## Modules
 
 | | |
 |--|--|
 | **01 — Docker and lab environment** | [modules/01-docker/](modules/01-docker/README.md) |
-| **02 — version control** | [modules/02-version-control/](modules/02-version-control/README.md) |
+| **02 — Version control** | [modules/02-version-control/](modules/02-version-control/README.md) |
 
 [Full module list](modules/README.md)
 
