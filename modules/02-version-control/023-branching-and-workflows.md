@@ -27,7 +27,7 @@ git checkout -b feature/example-task
 git branch
 ```
 
-- Naming: `feature/…`, `bugfix/…`, `docs/…`, `test/…` when it helps others.  
+- Naming: `feature/...`, `bugfix/...`, `docs/...`, `test/...` when it helps others.  
 - Dead end? Check out `main` again; delete or keep the branch as you prefer.
 
 ---
@@ -59,7 +59,12 @@ git reset --hard HEAD
 # Returning to an older snapshot
 
 - Look up the **hash** or **tag** for the good state.  
-- Check out those paths (or reset to that commit), then **commit** with an honest message about **reverting** or **restoring**.  
+- Check out those paths, or reset to that commit/tag by:
+   - `git checkout <commit-hash>`
+   - `git checkout <tag-name>`
+- Then **commit** with an honest message about **reverting** or **restoring** with:
+   - `git commit -m "revert to <commit-hash>"`
+   - `git commit -m "restore to <tag-name>"`
 - Prefer **branches** for experiments so `main` rarely needs surgery.
 
 ---
