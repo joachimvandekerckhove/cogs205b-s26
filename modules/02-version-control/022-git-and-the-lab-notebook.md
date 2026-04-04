@@ -67,6 +67,7 @@ git config --global --list
 1. **Edit** files.  
 2. **Stage** with `git add` (what enters the next snapshot).  
 3. **Commit** with `git commit` and a message that states **why** the change matters.
+4. (Optional) **Push** to GitHub to save the commit to the remote repository.
 
 ---
 
@@ -200,7 +201,7 @@ git log
 
 - `git add .` / `git add -A` grab **all** files in scope—often too much.  
 - Risk: **secrets**, local config, unrelated edits; muddy messages; hard **reverts**.  
-- Prefer `git add <path>…` explicitly.  
+- Prefer `git add <path>...` explicitly.  
 - `git add -u` updates **tracked** files only—still match the message.
 
 ---
@@ -217,7 +218,7 @@ git log
 
 - **Stage** deliberately; **commit** with **scoped**, **imperative** messages.  
 - **`git log`** + **`git diff`** = searchable lab record beside the code.  
-- Next: [Branching and workflows](./023-version-control.md) for branches, tags, and collaboration patterns.
+- Next: [Version control](./023-version-control.md) for branches, tags, and collaboration patterns.
 
 ---
 
