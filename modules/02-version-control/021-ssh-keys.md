@@ -51,11 +51,11 @@ mkdir -p /workspace/secrets
 Inside the container, generate a new SSH keypair:
 
    ```bash
-   ssh-keygen -t ed25519 -C "joachim@cogs106-docker"
+   ssh-keygen -t ed25519 -C "joachim@class-docker"
    ```
 
  - `-t ed25519` specifies the key type.
- - `-C "joachim@cogs106-docker"` adds a comment for identification.  You can write anything here.
+ - `-C "joachim@class-docker"` adds a comment for identification.  You can write anything here.
 
 ---
 
