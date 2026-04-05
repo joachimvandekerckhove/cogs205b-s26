@@ -41,6 +41,31 @@ sudo apt remove nano
 
 ---
 
+# Downloading files (`wget`)
+
+- **`wget URL`** fetches a file over **HTTP/HTTPS** and saves it in the current directory (name taken from the URL unless you set **`-O path`**).
+
+```bash
+wget -O paper.pdf 'https://example.com/files/paper.pdf'
+wget --quiet -O dataset.zip 'https://example.com/data/archive.zip'
+```
+
+- **`curl -L -o outfile URL`** is a common alternative (**`-L`** follows redirects). Install **`wget`** or **`curl`** in the container with **`apt`** if a minimal image lacks them, or add them to your Dockerfile.
+
+---
+
+# ZIP archives (`unzip`)
+
+- **`unzip`** extracts **`.zip`** archives. Use **`-d dir`** to unpack into a directory (the directory is created if needed).
+
+```bash
+unzip -q archive.zip -d /tmp/my_extract
+```
+
+- **`-q`** is quiet. **`unzip -l archive.zip`** lists contents without extracting.
+
+---
+
 # Getting help
 
 - **`man command`** — full manual page (`q` to quit).  
@@ -139,6 +164,7 @@ scp results.csv user@hostname:/data/
 # Summary
 
 - **`sudo`** for admin commands; **`apt`** for packages.  
+- **`wget`** (or **`curl`**) to download files; **`unzip`** to extract **`.zip`** archives.  
 - **`man`**, **`--help`**, **`man -k`** for documentation.  
 - **Aliases** save keystrokes; put them in `~/.bashrc`.  
 - **`grep`** and **`find`** to search text and files.  

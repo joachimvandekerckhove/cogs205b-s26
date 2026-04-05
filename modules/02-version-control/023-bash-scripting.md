@@ -43,7 +43,13 @@ echo "Output goes to output/${NAME}.csv"
 ```
 
 - Assign with **no spaces** around `=`.  
-- Reference with **`$VAR`** or **`${VAR}`** (braces clarify boundaries).
+- Reference with **`$VAR`** or **`${VAR}`** (braces clarify boundaries).  
+- **`$(command)`** — **command substitution**: run **`command`** and substitute its **standard output** as text. Use it on the **right-hand side** of **`=`** to store a result in a variable:
+
+```bash
+DAY=$(date +%Y-%m-%d)
+lines=$(wc -l < notes.txt)
+```
 
 ---
 
