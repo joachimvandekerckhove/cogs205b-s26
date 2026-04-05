@@ -111,4 +111,4 @@ Many teams use **both**: Make for heavy builds, **just** as a pretty front-end t
 
 ---
 
-[← Previous](027-code-organization.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](../03-layout-and-ci/README.md)
+[← Previous](027-code-organization.md) · [Module 02](README.md) · [Course home](../../README.md)

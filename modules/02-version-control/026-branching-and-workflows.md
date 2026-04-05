@@ -137,7 +137,7 @@ git reset --hard HEAD
 - **Commit** often — small steps are easier to understand and revert.  
 - **Pull** latest changes before starting new work.  
 - **Branch** for every task; keep `main` clean.  
-- **Write** descriptive commit messages ([commit discipline](./022-git-and-the-lab-notebook.md)).  
+- **Write** descriptive commit messages ([commit discipline](./025-git-and-the-lab-notebook.md)).  
 - **Test** changes before committing.
 
 ---
