@@ -13,8 +13,13 @@
 | 7 | [Code organization](./027-code-organization.md) | [▶ Code organization](https://www.youtube.com/watch?v=ZzWxQnnPx5c) |
 | 8 | [Makefile and justfile](./028-makefile-and-justfile.md) | — |
 
+## Homework
+
+[homework.md](./homework.md)
+
 ## Files
 
+- [Module 02 file assets](./files/README.md) (sample ZIP for homework)  
 - [Git cheat sheet (PDF)](../../img/git-cheat-sheet.pdf)  
 - [Ubuntu CLI cheat sheet (PDF)](../../img/ubuntu-cli-cheat-sheet.pdf)  
 
