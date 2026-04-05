@@ -117,5 +117,5 @@ This setup allows you to use a full-featured development environment while keepi
 
 ---
 
-[← Previous](012-start-docker-container.md) · [Module 01](README.md) · [Course home](../../README.md) · [Next →](../02-version-control/021-ssh-keys.md)
+[← Previous](012-start-docker-container.md) · [Module 01](README.md) · [Course home](../../README.md) · [Next →](../02-version-control/021-bash-basics.md)
 

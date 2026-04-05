@@ -21,8 +21,13 @@ module: "02 — Version control"
 
 # In this module
 
-- [SSH Keys](./021-ssh-keys.md)  
-- [Branching and workflows](./023-branching-and-workflows.md)  
+- [Bash basics](./021-bash-basics.md)  
+- [Advanced bash](./022-advanced-bash.md)  
+- [Bash scripting](./023-bash-scripting.md)  
+- [SSH Keys](./024-ssh-keys.md)  
+- [Branching and workflows](./026-branching-and-workflows.md)  
+- [Code organization](./027-code-organization.md)  
+- [Makefile and justfile](./028-makefile-and-justfile.md)  
 
 ---
 
@@ -218,7 +223,7 @@ git log
 
 - **Stage** deliberately; **commit** with **scoped**, **imperative** messages.  
 - **`git log`** + **`git diff`** = searchable lab record beside the code.  
-- Next: [Branching and workflows](./023-branching-and-workflows.md) for branches, tags, and collaboration patterns.
+- Next: [Branching and workflows](./026-branching-and-workflows.md) for branches, tags, and collaboration patterns.
 
 ---
 
@@ -230,4 +235,4 @@ git log
 
 ---
 
-[← Previous](021-ssh-keys.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](023-branching-and-workflows.md)
+[← Previous](024-ssh-keys.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](026-branching-and-workflows.md)

@@ -118,4 +118,4 @@ By generating SSH keys inside the Docker container and saving them in a persiste
 
 ---
 
-[← Previous](../01-docker/013-connecting-vscode.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](022-git-and-the-lab-notebook.md)
+[← Previous](023-bash-scripting.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](025-git-and-the-lab-notebook.md)

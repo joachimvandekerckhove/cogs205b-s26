@@ -6,7 +6,7 @@ module: "02 — Version control"
 
 # Branching and workflows
 
-- [Git and the lab notebook](./022-git-and-the-lab-notebook.md) covered the **commit loop**: edit → stage → commit.  
+- [Git and the lab notebook](./025-git-and-the-lab-notebook.md) covered the **commit loop**: edit → stage → commit.  
 - This chapter adds **branches**, **tags**, **undo**, and **collaboration** patterns.
 
 ---
@@ -178,4 +178,4 @@ git reset --hard HEAD
 
 ---
 
-[← Previous](022-git-and-the-lab-notebook.md) · [Module 02](README.md) · [Course home](../../README.md)
+[← Previous](025-git-and-the-lab-notebook.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](027-code-organization.md)
