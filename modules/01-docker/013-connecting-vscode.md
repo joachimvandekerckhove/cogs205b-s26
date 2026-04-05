@@ -10,7 +10,9 @@ This guide will help you set up Visual Studio Code (VSCode) to connect to your r
 
 Later in the course, we will probably use Cursor instead of VSCode.
 
-## Prerequisites
+---
+
+# Prerequisites
 
 Before you begin, ensure that you have:
 
@@ -21,21 +23,22 @@ Before you begin, ensure that you have:
 2. **VSCode** installed on your computer.
 
    - Download it from [Visual Studio Code](https://code.visualstudio.com/).
-   - Install the "Remote - SSH" and "Remote - Containers" extensions from the Extensions Marketplace.
+   - Install the "Remote - SSH" and "Dev - Containers" extensions from the Extensions Marketplace.
 
 ---
 
 ![](files/figures/vscode-1.png)
 
+---
 
-## Connect using the Remote - Containers Extension
+# Connect using the Dev - Containers Extension
 
-You can use the "Remote - Containers" extension to connect directly to the running container:
+You can use the "Dev - Containers" extension to connect directly to the running container:
 
 1. **Attach to the container**:
 
    - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open the command palette.
-   - Type `Remote-Containers: Attach to Running Container` and select it.
+   - Type `Dev-Containers: Attach to Running Container` and select it.
    - Choose `class-container` from the list.
 
 ---
@@ -46,8 +49,9 @@ You can use the "Remote - Containers" extension to connect directly to the runni
 
 ![](files/figures/vscode-3.png)
 
+---
 
-## Connect using the Remote - Containers Extension
+# Connect using the Dev - Containers Extension
 
 2. **Open the workspace**:
 
@@ -63,7 +67,9 @@ You can use the "Remote - Containers" extension to connect directly to the runni
 
 ![](files/figures/vscode-5.png)
 
-## Test your setup
+---
+
+# Test your setup
 
 1. **Create a Python file**:
 
@@ -82,8 +88,9 @@ You can use the "Remote - Containers" extension to connect directly to the runni
      ```
    - Verify that the output is `Hello from Docker!`.
 
+---
 
-## Troubleshooting
+# Troubleshooting
 
 1. **No container found**:
 
@@ -102,7 +109,9 @@ You can use the "Remote - Containers" extension to connect directly to the runni
      python3 --version
      ```
 
-## Summary
+---
+
+# Summary
 
 This setup allows you to use a full-featured development environment while keeping your code and dependencies isolated in a container.
 

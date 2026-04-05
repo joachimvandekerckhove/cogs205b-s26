@@ -20,8 +20,9 @@ Open Docker Desktop and navigate to the "Images" tab:
 
 ![](files/figures/docker-desktop-1.png)
 
+---
 
-## Prerequisites
+# Prerequisites
 
 2. **The Dockerfile** provided for the class.
 
@@ -39,7 +40,9 @@ Save this in a file named `Dockerfile`:
    CMD ["/usr/sbin/sshd", "-D"]
 ```
 
-## Step 1: Build the Docker image
+---
+
+# Step 1: Build the Docker image
 
 1. **Open a terminal**:
    - Navigate to the directory where your `Dockerfile` is saved.
@@ -59,7 +62,9 @@ Save this in a file named `Dockerfile`:
 ![](files/figures/docker-desktop-2.png)
 
 
-## Step 2: Run the Docker Container
+---
+
+# Step 2: Run the Docker Container
 
 1. **Launch the container** from Docker Desktop:
    - Go to the "Images" tab.
@@ -72,7 +77,9 @@ Save this in a file named `Dockerfile`:
 Setting a Volume is important because only files stored in that directory will survive if the container is destroyed!
 
 
-## Step 2: Run the Docker Container
+---
+
+# Step 2: Run the Docker Container
 
 2. Alternatively, you can **use the terminal** to run the container:
 
@@ -85,7 +92,9 @@ Setting a Volume is important because only files stored in that directory will s
 ```
 (But don't do this now, use Docker Desktop.)
 
-## Step 2: Run the Docker Container
+---
+
+# Step 2: Run the Docker Container
 
 3. **Verify the container is running**:
    - In Docker Desktop, check that the `class-container` status shows as "Running."
@@ -100,7 +109,9 @@ Setting a Volume is important because only files stored in that directory will s
 
 ![](files/figures/docker-desktop-4.png)
 
-## Step 3: Test the container
+---
+
+# Step 3: Test the container
 
 Access the container
 
@@ -115,7 +126,9 @@ Access the container
 ![](files/figures/docker-desktop-5.png)
 
 
-## Step 3: Test the container
+---
+
+# Step 3: Test the container
 
 The integrated shell is running on the Ubuntu/Linux operating system inside the container.  You can learn the basic commands of the command line interface from the cheat sheet I'll put on GitHub.
 
@@ -125,7 +138,9 @@ Alternatively, open your system's terminal to connect to the container:
    docker exec -it class-container bash
    ```
 
-## When you're done: Stop (and later restart) the container
+---
+
+# When you're done: Stop (and later restart) the container
 
 In Docker Desktop, click the stop or play button in the Containers tab.
 
@@ -141,7 +156,9 @@ In the terminal to restart the container:
   docker start class-container
   ```
 
-## Summary
+---
+
+# Summary
 
 You’ve now set up the class Docker container, confirmed it works, and learned how to manage it using Docker Desktop. This container will be your consistent Python environment for all class activities.
 

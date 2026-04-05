@@ -12,7 +12,9 @@ COGS 205B is a graduate **computational lab skills** course: we build a workflow
 - Course git repo (coming soon): slides, homework specs, starters
 - Textbook: Poldrack, R., [*Better Code, Better Science*](https://bettercodebetterscience.github.io/book/)
 
-## Topics
+---
+
+# Topics
 
 - Docker, shell, SSH
 - Git, CI
@@ -20,7 +22,9 @@ COGS 205B is a graduate **computational lab skills** course: we build a workflow
 - pytest, TDD, validation
 - Other lab tools
 
-## Contents
+---
+
+# Contents
 
 - **Introduction to containerization**
 - Start the class Docker container
@@ -37,7 +41,7 @@ We will use Docker Desktop to understand the basic ideas and practical applicati
 
 ---
 
-## What is containerization?
+# What is containerization?
 
 Containerization is a way to package software and everything it needs to run into a single "box," called a **container**. This box can be moved to any computer, and the software will run exactly the same way.  Containerization is a lot like [virtualization](https://en.wikipedia.org/wiki/Virtualization) but tends to be more efficient.
 
@@ -45,7 +49,7 @@ Containerization is a way to package software and everything it needs to run int
 
 ---
 
-## What is containerization?
+# What is containerization?
 
 You can think of a container a little bit like a parasite that lives inside another computer.  That has a negative connotation, so we will simply call it the **container** and the computer will be the **host**.  A single host can have many containers.
 
@@ -53,13 +57,13 @@ Below, we will also talk about the **image**, which something like a template to
 
 ---
 
-## Everything's in there
+# Everything's in there
 
 When you buy a piece of furniture from IKEA, the package includes everything you need: screws, tools, instructions, and the wooden pieces. Even if you don't have your own tools, you can still assemble the furniture because everything is in the box. Similarly, the **image** provides all the "tools" and "pieces" a program needs to run, so it works the same way on any computer.  The **container** is like the finished piece of furniture.
 
 ---
 
-## Why use containers?
+# Why use containers?
 
 - **Consistency**: Containers ensure the same program works the same way, no matter whose computer it’s on.
 - **Portability**: You can move containers between your laptop, a friend's computer, or even powerful online servers.
@@ -67,7 +71,7 @@ When you buy a piece of furniture from IKEA, the package includes everything you
 
 ---
 
-## Key concepts and terminology
+# Key concepts and terminology
 
 1. **Images**
 
@@ -81,7 +85,7 @@ When you buy a piece of furniture from IKEA, the package includes everything you
 
 ---
 
-## Key concepts and terminology
+# Key concepts and terminology
 
 3. **Docker** and **Docker Desktop**
 
@@ -91,7 +95,7 @@ Docker is a set of services to create containers.  It is a widely used industry 
 
 ---
 
-## Key concepts and terminology
+# Key concepts and terminology
 
 Steps to get started:
 
@@ -101,7 +105,7 @@ Steps to get started:
 
 ---
 
-## Key concepts and terminology
+# Key concepts and terminology
 
 4. **Registry**
 
@@ -116,7 +120,7 @@ Steps to get started:
 
 ---
 
-## Key concepts and terminology
+# Key concepts and terminology
 
 6. **Docker Desktop**
 
@@ -128,7 +132,7 @@ Docker Desktop is a tool that makes it easy to create, share, and run containers
 
 ---
 
-## Containers are important
+# Containers are important
 
 Without containers:
 
@@ -140,7 +144,7 @@ Without containers:
 
 ---
 
-## Containers are important
+# Containers are important
 
 Container solutions:
 
@@ -150,7 +154,7 @@ Container solutions:
 
 ---
 
-## Containers are important
+# Containers are important
 
 Everyday benefits:
 
@@ -162,7 +166,7 @@ Everyday benefits:
 
 ---
 
-## Recap
+# Recap
 
 - Containers are like portable "boxes" for programs, ensuring they run the same way everywhere.
 - Docker Desktop makes creating and using containers simple and efficient.
@@ -170,7 +174,7 @@ Everyday benefits:
 
 ---
 
-## Next steps
+# Next steps
 
  - Download and install Docker Desktop on your computer.
  - Run the "Hello World" container to verify your setup.
