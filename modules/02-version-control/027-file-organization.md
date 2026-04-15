@@ -1,10 +1,10 @@
 ---
-title: "Code organization"
+title: "File organization"
 course: COGS 205B
 module: "02 — Version control"
 ---
 
-# Code organization
+# File organization
 
 - After **Git** and **workflows**, projects need a **layout** newcomers can navigate.  
 - Think about **folders**, **data stages**, **naming**, and **README** habits before deeper tooling in later modules.
@@ -84,6 +84,18 @@ A foolish consistency is the hobgoblin of little minds.
 
 4. **Design for sharing** even if collaborators are unlikely: act as if the repo could go public today.  
 5. **Internal consistency** beats copying someone else’s tree blindly.
+
+---
+
+# Principles checklists (FAIR and related)
+
+- **FAIR** for research outputs and metadata:
+  - **Findable**: clear names, searchable README, stable paths.
+  - **Accessible**: documented access method and permissions.
+  - **Interoperable**: standard formats (`csv`, `json`, `parquet`) and clear schemas.
+  - **Reusable**: license, provenance, and enough documentation to rerun.
+- **CARE** (especially with human/community data): **Collective benefit**, **Authority to control**, **Responsibility**, **Ethics**.  
+- **Reproducibility heuristics** (practical lab version): deterministic scripts, pinned environments, and one-command rebuilds.
 
 ---
 

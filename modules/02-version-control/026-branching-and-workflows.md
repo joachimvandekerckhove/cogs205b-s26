@@ -178,4 +178,4 @@ git reset --hard HEAD
 
 ---
 
-[← Previous](025-git-and-the-lab-notebook.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](027-code-organization.md)
+[← Previous](025-git-and-the-lab-notebook.md) · [Module 02](README.md) · [Course home](../../README.md) · [Next →](027-file-organization.md)

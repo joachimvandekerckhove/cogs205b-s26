@@ -6,6 +6,8 @@
 |--|--|
 | **01 — Docker and lab environment** | [modules/01-docker/](modules/01-docker/README.md) |
 | **02 — Version control** | [modules/02-version-control/](modules/02-version-control/README.md) |
+| **03 — Object-oriented programming** | [modules/03-object-oriented-programming/](modules/03-object-oriented-programming/README.md) |
+| **04 — Test-driven development** | [modules/04-test-driven-development/](modules/04-test-driven-development/README.md) |
 
 [Full module list](modules/README.md)
 

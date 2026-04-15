@@ -26,7 +26,7 @@ module: "02 — Version control"
 - [Bash scripting](./023-bash-scripting.md)  
 - [SSH Keys](./024-ssh-keys.md)  
 - [Branching and workflows](./026-branching-and-workflows.md)  
-- [Code organization](./027-code-organization.md)  
+- [File organization](./027-file-organization.md)  
 - [Makefile and justfile](./028-makefile-and-justfile.md)  
 
 ---

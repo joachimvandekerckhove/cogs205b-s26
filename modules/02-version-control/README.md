@@ -10,7 +10,7 @@
 | 4 | [SSH Keys](./024-ssh-keys.md) | [▶ SSH Keys](https://www.youtube.com/watch?v=PJW5cSvPmQg) |
 | 5 | [Git and the lab notebook](./025-git-and-the-lab-notebook.md) | — |
 | 6 | [Branching and workflows](./026-branching-and-workflows.md) | [▶ Version control](https://www.youtube.com/watch?v=x13-c24qn8U) |
-| 7 | [Code organization](./027-code-organization.md) | [▶ Code organization](https://www.youtube.com/watch?v=ZzWxQnnPx5c) |
+| 7 | [File organization](./027-file-organization.md) | [▶ Code organization](https://www.youtube.com/watch?v=ZzWxQnnPx5c) |
 | 8 | [Makefile and justfile](./028-makefile-and-justfile.md) | — |
 
 ## Homework
@@ -23,4 +23,4 @@
 - [Git cheat sheet (PDF)](../../img/git-cheat-sheet.pdf)  
 - [Ubuntu CLI cheat sheet (PDF)](../../img/ubuntu-cli-cheat-sheet.pdf)  
 
-[Module 01](../01-docker/README.md) · [Course home](../../README.md)
+[Module 01](../01-docker/README.md) · [Course home](../../README.md) · [Module 03](../03-object-oriented-programming/README.md)

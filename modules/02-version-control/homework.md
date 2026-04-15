@@ -24,4 +24,3 @@ Write a single bash script `./scripts/fetch-csvs.sh` that:
    Use the calendar date `YYYY-MM-DD` as the folder name. Create the `data/` tree as needed.
 
 3. Commits the CSV files under `data/` and itself to the repository, then pushes to GitHub.
-
