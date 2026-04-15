@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 python3-pip \
-    bash openssh-server
+    bash openssh-server git
 RUN mkdir /var/run/sshd && \
     echo 'root:rootpassword' | chpasswd
 EXPOSE 22
