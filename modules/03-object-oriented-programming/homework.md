@@ -9,23 +9,15 @@ Implement a **signal detection theory (SDT)** class in Python, then extend it wi
 Use **hits**, **misses**, **false alarms**, and **correct rejections** as counts from a yes/no detection experiment.
 
 - **Hit rate**  
-  $$
-  H = \frac{\text{hits}}{\text{hits} + \text{misses}}
-  $$
+  `H = hits / (hits + misses)`
   (avoid dividing by zero if both are zero; same for FA rate below.)
 - **False alarm rate**  
-  $$
-  FA = \frac{\text{false alarms}}{\text{false alarms} + \text{correct rejections}}
-  $$
-- Let \(Z\) be the **standard normal quantile** (inverse CDF), `scipy.stats.norm.ppf` in Python.
+  `FA = false_alarms / (false_alarms + correct_rejections)`
+- Let `Z` be the **standard normal quantile** (inverse CDF), `scipy.stats.norm.ppf` in Python.
 - **Sensitivity:**  
-  $$
-  d' = Z(H) - Z(FA)
-  $$
+  `d' = Z(H) - Z(FA)`
 - **Criterion (C):**  
-  $$
-  C = -\tfrac{1}{2}\bigl(Z(H) + Z(FA)\bigr)
-  $$
+  `C = -0.5 * (Z(H) + Z(FA))`
 
 ### Background material on SDT
 
