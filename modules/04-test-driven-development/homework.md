@@ -15,7 +15,7 @@ Two models differ by prior on $\theta$:
 
 The Bayes factor compares evidence:
 
-- $B = \dfrac{p(k \mid \text{spike})}{p(k \mid \text{slab})}$
+- $B = \frac{p(k \mid \text{spike})}{p(k \mid \text{slab})}$
 
 ## Mathematical background
 
@@ -24,6 +24,7 @@ Notation and framing in this section follow Etz, Haaf, Rouder, and Vandekerckhov
 Let the observed data be $x=(k,n)$ where $k$ is successes out of $n$ Bernoulli trials.
 
 For a success-rate parameter $\theta$, the binomial sampling model is
+
 $$
 P(x\mid \theta)=\binom{n}{k}\theta^k(1-\theta)^{n-k}.
 $$
@@ -35,22 +36,25 @@ Define two hypotheses as models on $\theta$:
 - $\mathcal{H}_0$ (slab): $\theta \sim U(0,1)$
 - $\mathcal{H}_1$ (spike): $\theta \sim U(a, b)$ (take $a$ and $b$ from the running example in Etz et al., 2018)
 
-So the corresponding prior densities are
+So the corresponding prior densities are:
+
 $$
 p(\theta\mid \mathcal{H}_0)=1\ \text{on }[0,1],\qquad
 p(\theta\mid \mathcal{H}_1)=\frac{1}{c}\ \text{on }[a,b].
 $$
 
-![Two competing hypotheses expressed as priors in the parameter space: null (spike) and directional alternative (dashed slab).](./files/figures/pv-p.png){ width=72% }
+<img src="./files/figures/pv-p.png" alt="Two competing hypotheses expressed as priors in the parameter space: null (spike) and directional alternative (dashed slab)." width="72%">
 
 ### Marginal likelihood and Bayes factor
 
 For model $\mathcal{H}_i$, the model evidence is
+
 $$
 P(x\mid \mathcal{H}_i)=\int P(x\mid\theta)\,p(\theta\mid \mathcal{H}_i)\,d\theta.
 $$
 
 Define the Bayes factor favoring $\mathcal{H}_1$ over $\mathcal{H}_0$ as
+
 $$
 B_{1:0}=\frac{P(x\mid \mathcal{H}_1)}{P(x\mid \mathcal{H}_0)}.
 $$
@@ -58,6 +62,7 @@ $$
 ### Prior odds to posterior odds
 
 Using the notation from the paper:
+
 $$
 \frac{P(\mathcal{H}_1\mid x)}{P(\mathcal{H}_0\mid x)}
 =
@@ -69,9 +74,11 @@ So $B_{1:0}$ is the multiplicative update from prior odds to posterior odds.
 ### Closed-form evidence for this pair
 
 With the two uniforms above:
+
 $$
 P(x\mid \mathcal{H}_0)=\int_0^1 \binom{n}{k}\theta^k(1-\theta)^{n-k}\,d\theta,
 $$
+
 $$
 P(x\mid \mathcal{H}_1)=\int_{a}^{b} \frac{1}{c}\,\binom{n}{k}\theta^k(1-\theta)^{n-k}\,d\theta.
 $$
@@ -90,7 +97,7 @@ result = scipy.integrate.quad(integrand, 0, 1)
 print(result)
 ```
 
-![Predictions in data space implied by competing hypotheses.](./files/figures/pv-d.png){ width=72% }
+<img src="./files/figures/pv-d.png" alt="Predictions in data space implied by competing hypotheses." width="72%">
 
 ### Useful smoke tests for your test suite
 
