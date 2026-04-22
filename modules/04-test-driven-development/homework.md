@@ -64,9 +64,7 @@ $$
 Using the notation from the paper:
 
 $$
-\frac{P(\mathcal{H}_1\mid x)}{P(\mathcal{H}_0\mid x)}
-=
-\frac{P(\mathcal{H}_1)}{P(\mathcal{H}_0)}\times B_{1:0}.
+\frac{P(\mathcal{H}_1\mid x)}{P(\mathcal{H}_0\mid x)} = \frac{P(\mathcal{H}_1)}{P(\mathcal{H}_0)}\times B_{1:0}.
 $$
 
 So $B_{1:0}$ is the multiplicative update from prior odds to posterior odds.
