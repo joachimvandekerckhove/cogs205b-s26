@@ -7,6 +7,7 @@
 | 1 | [Test-driven development](./041-test-driven-development.md) | — |
 | 2 | [unittest in practice](./042-unittest.md) | — |
 | 3 | [In-class exercise: advanced SDT test suite](./043-in-class-exercise.md) | — |
+| 4 | [Organizing Python files for unittest](./044-organizing-python-for-tests.md) | — |
 
 ## Homework
 

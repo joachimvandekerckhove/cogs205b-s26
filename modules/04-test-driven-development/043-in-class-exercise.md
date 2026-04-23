@@ -110,4 +110,4 @@ Before the end of class, submit a draft test suite that includes:
 
 ---
 
-[← Previous](042-unittest.md) · [Module 04](README.md) · [Course home](../../README.md)
+[← Previous](042-unittest.md) · [Module 04](README.md) · [Course home](../../README.md) · [Next →](044-organizing-python-for-tests.md)
