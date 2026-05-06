@@ -9,6 +9,10 @@
 | 3 | [In-class exercise: code smells](./053-in-class-exercise.md) |
 | 4 | [In-class exercise: solutions](./054-in-class-exercise-solutions.md) |
 
+## Homework
+
+[Module 05 — Video walkthrough of Module 4 code](./homework.md)
+
 ## Reading
 
 Martin Fowler, *Refactoring* — [martinfowler.com/books/refactoring.html](https://martinfowler.com/books/refactoring.html)
