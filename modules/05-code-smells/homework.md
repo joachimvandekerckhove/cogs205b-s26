@@ -59,7 +59,7 @@ You do **not** need to explain basics already emphasized in Module 4 slides (for
 
 ## Protip for recording presentations
 
-Do everything in one take, but speak clearly and deliberately with a short pause between segments. That way you can delete segments to trim the video to the desired length. If you feel you messed up a segment, start over without stopping the recording. I use [ShotCut](https://www.shotcut.org/) to edit my videos, but [OBS](https://obsproject.com/) is also very good and [YouTube Studio](https://www.youtube.com/studio) is convenient if you don't mind uploading to the cloud.
+Do everything in one take, but speak clearly and deliberately with a short pause between segments. That way you can delete segments to trim the video to the desired length. If you feel you messed up a segment, start over without stopping the recording. I use [ShotCut](https://www.shotcut.org/) to edit my videos, but [OBS](https://obsproject.com/) is also very good and [YouTube Studio](https://studio.youtube.com/) is convenient if you don't mind uploading to the cloud.
 
 ---
 
