@@ -22,4 +22,4 @@
 - [tex/includes/unittest.m.tex](./tex/includes/unittest.m.tex)
 - [tex/includes/applied.tex](./tex/includes/applied.tex)
 
-[Module 03](../03-object-oriented-programming/README.md) · [Course home](../../README.md)
+[Module 03](../03-object-oriented-programming/README.md) · [Course home](../../README.md) · [Module 05](../05-code-smells/README.md)

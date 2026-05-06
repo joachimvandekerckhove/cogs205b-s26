@@ -8,6 +8,8 @@
 | **02 — Version control** | [modules/02-version-control/](modules/02-version-control/README.md) |
 | **03 — Object-oriented programming** | [modules/03-object-oriented-programming/](modules/03-object-oriented-programming/README.md) |
 | **04 — Test-driven development** | [modules/04-test-driven-development/](modules/04-test-driven-development/README.md) |
+| **05 — Code smells and refactoring** | [modules/05-code-smells/](modules/05-code-smells/README.md) |
+| **06 — AI-assisted coding** | [modules/06-ai-assisted-coding/](modules/06-ai-assisted-coding/README.md) |
 
 [Full module list](modules/README.md)
 
