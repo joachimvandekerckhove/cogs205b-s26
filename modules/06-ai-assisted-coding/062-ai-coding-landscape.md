@@ -166,6 +166,29 @@ For scientific code, this seems like an excellent bargain between AI and human:
 
 ---
 
+# Technical debt
+
+**Technical debt** is the future cost of choices you make now: code that works today but will slow you down (or break) the next time you need to extend, port, or trust it. 
+
+Like financial debt, technical debt is not automatically bad -- sometimes you borrow on purpose, to ship a result before a deadline or to keep a script readable while you're still exploring.
+
+---
+
+# AI tools change the interest rate on technical debt
+
+AI assistants change the rate at which debt accrues:
+
+- **Mint debt very quickly.** A 200-line draft that runs can land in a repo in minutes.
+- **Hide local complexity.** Code that the author would not have written by hand is harder to keep in your head, which makes the next refactor (with or without AI) more expensive.
+
+Borrowing is now nearly frictionless, but paying requires a human to read the code!
+
+Treat every accepted AI patch as a small loan.
+
+The bottleneck in scientific programming is not the typing but the understanding!
+
+---
+
 # Generative AI workflow
 
 In a generative workflow, the model produces output and waits.
