@@ -178,12 +178,10 @@ Like financial debt, technical debt is not automatically bad -- sometimes you bo
 
 AI assistants change the rate at which debt accrues:
 
-- **Mint debt very quickly.** A 200-line draft that runs can land in a repo in minutes.
-- **Hide local complexity.** Code that the author would not have written by hand is harder to keep in your head, which makes the next refactor (with or without AI) more expensive.
-
-Borrowing is now nearly frictionless, but paying requires a human to read the code!
-
-Treat every accepted AI patch as a small loan.
+- Agents **mint debt very quickly.** A 200-line draft that runs can land in a repo in minutes.
+- Agents **hide local complexity.** Code that the author would not have written by hand is harder to keep in your head, which makes the next refactor (with or without AI) more expensive.
+- Borrowing is now nearly frictionless, but paying the debt requires a human to read the code!
+- Treat every accepted AI patch as a small loan.
 
 The bottleneck in scientific programming is not the typing but the understanding!
 
@@ -495,6 +493,18 @@ Risky for:
 
 ---
 
+# Four interaction patterns
+
+| Pattern | Typical use |
+|---------|-------------|
+| Single-turn generation | Draft one function, regular expression, SQL query, or explanation |
+| Context-aware completion | Fill in code inside an editor using nearby files as context |
+| Programmatic access | Call a model API from Python, as in the Gemini example |
+| Autonomous execution | Let an agent inspect files, edit code, run tests, and revise |
+
+
+---
+
 # The core shift
 
 AI does not make programming expertise obsolete, but changes the balance of which skills matter.
@@ -515,4 +525,4 @@ More important:
 
 ---
 
-[← Previous](061-apis-and-http.md) · [Module 06](README.md) · [Course home](../../README.md) · [Next →](063-working-with-ai-tools.md)
+[← Previous](061-apis-and-http.md) · [Module 06](README.md) · [Course home](../../README.md) · [Next →](063-programmatic-access.md)
