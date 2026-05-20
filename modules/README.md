@@ -6,5 +6,6 @@
 - [04 — test-driven development](04-test-driven-development/README.md)
 - [05 — code smells and refactoring](05-code-smells/README.md)
 - [06 — AI-assisted coding](06-ai-assisted-coding/README.md)
+- [07 — Working with AI tools](07-working-with-ai-tools/README.md)
 
 [← Course home](../README.md)
