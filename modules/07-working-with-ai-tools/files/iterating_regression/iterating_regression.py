@@ -34,9 +34,10 @@ TEST_FILE.chmod(0o444)
 
 # Modifiable parameters
 
-MAX_ATTEMPTS = 2
+MAX_ATTEMPTS = 10
 INCLUDE_TEST_FILE = False
 USE_GOOD_PROMPT = False
+
 
 
 if USE_GOOD_PROMPT:
@@ -56,7 +57,7 @@ def run_tests() -> tuple[int, str]:
 
 client = GeminiSimpleAPI(
     api_key_file=None,
-    model="gemini-3.1-flash-lite",
+    model="gemma-4-31b-it",
     working_dir=TASK_DIR,
     protected_directories=[TEST_DIR],
 )
@@ -68,7 +69,7 @@ for attempt in range(1, MAX_ATTEMPTS + 1):
     files, notes = client.prompt(
         prompt=prompt_text,
         attachments=[TEST_FILE] if INCLUDE_TEST_FILE else [],
-        verbose=False,
+        verbose=True,
     )
 
     # Here you could re-insert the test file if it was modified.
@@ -84,7 +85,7 @@ for attempt in range(1, MAX_ATTEMPTS + 1):
     for file in files:
         shutil.copy(file, TASK_DIR / f"attempt_{attempt}" / file.name)
 
-    input("Press Enter to continue...")
+    # input("Press Enter to continue...")
     if code == 0:
         print(f"\nTests passed on attempt {attempt}.")
         break
