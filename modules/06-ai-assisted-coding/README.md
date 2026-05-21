@@ -6,11 +6,6 @@
 |--|--|
 | 1 | [APIs and HTTP](./061-apis-and-http.md) |
 | 2 | [The AI-coding landscape](./062-ai-coding-landscape.md) |
-| 3 | [Programmatic access and feedback loops](./063-programmatic-access.md) |
-
-## Homework
-
-[Module 06 — Agentic loop: implementing `BayesFactor`](./homework.md)
 
 ## Reference code
 

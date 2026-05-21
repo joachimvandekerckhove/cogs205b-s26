@@ -22,10 +22,10 @@ def load_api_key(key_file: Path = Path()) -> str:
     raise ValueError("GEMINI_API_KEY is not set and key file not found.")
 
 API_KEY = load_api_key()
-
+MODEL = "gemini-3.1-flash-lite"
 url = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-2.5-flash:generateContent"
+    f"{MODEL}:generateContent"
 )
 
 # POST request to Gemini API

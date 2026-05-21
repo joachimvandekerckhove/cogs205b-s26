@@ -525,4 +525,4 @@ More important:
 
 ---
 
-[← Previous](061-apis-and-http.md) · [Module 06](README.md) · [Course home](../../README.md) · [Next →](063-programmatic-access.md)
+[← Previous](061-apis-and-http.md) · [Module 06](README.md) · [Course home](../../README.md) · [Next →](../07-working-with-ai-tools/071-programmatic-access.md)

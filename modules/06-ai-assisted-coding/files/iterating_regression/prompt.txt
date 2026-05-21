@@ -1,5 +1,0 @@
-Implement a function fit_regression(X, y, add_intercept=True) in regression.py.
-- When add_intercept=True, prepend a column of ones to X before solving.
-- Return a 1-D array of coefficients [intercept, slope, ...].
-- Use numpy only. Do not import sklearn.
-- Do not modify the test file.
