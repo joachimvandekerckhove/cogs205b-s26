@@ -36,7 +36,7 @@ TEST_FILE.chmod(0o444)
 
 MAX_ATTEMPTS = 10
 INCLUDE_TEST_FILE = False
-USE_GOOD_PROMPT = False
+USE_GOOD_PROMPT = True
 
 
 
@@ -74,7 +74,6 @@ for attempt in range(1, MAX_ATTEMPTS + 1):
 
     # Here you could re-insert the test file if it was modified.
 
-    print(f"Notes: {notes}")
     code, output = run_tests()
     print(f"Output: {output}")
 
