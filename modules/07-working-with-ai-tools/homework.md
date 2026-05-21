@@ -48,6 +48,8 @@ You need:
 
     Copy [`files/agent_loop/bayes_factor_stub.py`](./files/agent_loop/bayes_factor_stub.py) into `week08homework/bayes_factor.py`. Copy your Module 04 test file into `week08homework/tests/`.
 
+    > **Note:** If your test file used the `unittest.expectedFailure` decorator, remove that.
+
 2. Confirm the tests fail before the loop starts:
 
     ```bash
