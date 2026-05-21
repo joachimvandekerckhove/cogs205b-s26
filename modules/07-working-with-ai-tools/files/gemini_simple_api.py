@@ -20,6 +20,8 @@ MODEL_LIST = [
     "gemini-2.5-computer-use-preview-10-2025",
     "gemini-3.1-pro-preview",
     "gemini-3.1-pro-preview-customtools",
+    "gemma-4-26b-a4b-it",
+    "gemma-4-31b-it",
 ]
 
 # Default schema for `generate_content_structured`: one or more files + optional notes.
@@ -130,10 +132,10 @@ class GeminiSimpleAPI:
         working_dir: Path | str,
         protected_directories: Sequence[Path | str] | None = None,
     ) -> None:
-        self._model = self.set_model(model)
+        self.set_model(model)
         self._api_key = self._load_api_key(api_key_file)
         self._working_dir = self._ensure_working_dir(working_dir)
-        self._protected_directories = self.set_protected_directories(protected_directories)
+        self.set_protected_directories(protected_directories)
 
     ## Input validators ########################################################
     @staticmethod
@@ -260,10 +262,12 @@ class GeminiSimpleAPI:
             path = self._working_dir / file["relative_path"]
 
             # Check if the parent directory is protected (!)
-            if path.parent in self._protected_directories:
-                raise ValueError(f"Protected directory: {path.parent}")
+            if path.parent in self.get_protected_directories():
+                path = self._working_dir / "illegal_file.py"
+                path.write_text(f"print(\"You must not try to write to protected directory: {self.get_protected_directories()}\")", encoding="utf-8")
+            else:
+                path.write_text(file["content"], encoding="utf-8")
 
-            path.write_text(file["content"], encoding="utf-8")
             path_list.append(path)
         return path_list
 
@@ -280,6 +284,8 @@ class GeminiSimpleAPI:
 
         If ``verbose`` is True, also print a short write summary (omit when the caller prints).
         """
+        if verbose:
+            print(f"Prompt: {prompt}")
         content = self.generate_content_structured(prompt, attachments=attachments)
         files = content["files"]
         notes = content.get("notes", "")
