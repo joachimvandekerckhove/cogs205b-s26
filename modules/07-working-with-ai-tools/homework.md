@@ -95,6 +95,8 @@ task.txt
 agent_loop_output.txt   # terminal output of the loop run, copied to a file
 bayes_factor.py         # the implementation the model produced (or your edited version)
 reflection.md
+tests/
+   test_bayes_factor.py
 ```
 
 `reflection.md` must be **at most 250 words** describing how what you did, what happened, did you have to intervene, and what the model got right or wrong.
