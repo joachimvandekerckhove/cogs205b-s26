@@ -1,0 +1,45 @@
+Implement the `BayesFactor` class in `bayes_factor.py` for binomial data with n trials and k successes.
+
+Your code must pass the attached `tests/test_bayes_factor.py`. On retries, fix only `bayes_factor.py` using the test output provided; do not change tests.
+
+Required class and method signatures (do not change the constructor signature):
+
+- `BayesFactor(n, k)`
+- `likelihood(theta)`
+- `evidence_slab()`
+- `evidence_spike()`
+- `bayes_factor()`
+
+Prior specifications (Etz et al., 2018 running example):
+
+- Slab prior: theta ~ Uniform(0, 1), density p(theta | slab) = 1 on [0, 1]
+- Spike prior: theta ~ Uniform(0.47, 0.53), density p(theta | spike) = 1 / (0.53 - 0.47) on [0.47, 0.53]
+
+Mathematical definitions:
+
+- Binomial likelihood: P(k | n, theta) = C(n, k) * theta^k * (1 - theta)^(n - k)
+- Model evidence for a prior: integral of likelihood(theta) * prior_density(theta) over the prior support
+- Use `scipy.integrate.quad` for the integrals
+- Bayes factor: evidence_spike() / evidence_slab()
+
+Input validation in `__init__(n, k)`:
+
+- n and k must be integers (reject bool: bool is a subclass of int but must raise TypeError)
+- n and k must be non-negative; use message "n and k cannot be negative"
+- k must not exceed n; use message "k cannot be larger than n"
+- Store validated values as self.n and self.k
+
+Input validation in `likelihood(theta)`:
+
+- theta must be int or float (not bool); TypeError message "Theta must be an integer or float"
+- theta must satisfy 0 <= theta <= 1; ValueError message "Theta must be within the range [0, 1]"
+
+`bayes_factor()`:
+
+- If slab evidence is zero (or numerically ~0), raise ValueError("Bayes Factor undefined; slab evidence ≈ 0")
+
+Constraints:
+
+- Only modify `bayes_factor.py`
+- Do not modify any test file
+- Return plain Python source (no markdown fences in bayes_factor.py)

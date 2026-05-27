@@ -1,0 +1,1 @@
+print("You must not try to write to protected directory: [PosixPath('/home/joachim/Dropbox/Teaching/S26/cogs205b/repo/modules/07-working-with-ai-tools/homework-solution/tests')]")
