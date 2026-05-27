@@ -11,6 +11,7 @@
 | **05 — Code smells and refactoring** | [modules/05-code-smells/](modules/05-code-smells/README.md) |
 | **06 — AI-assisted coding** | [modules/06-ai-assisted-coding/](modules/06-ai-assisted-coding/README.md) |
 | **07 — Working with AI tools** | [modules/07-working-with-ai-tools/](modules/07-working-with-ai-tools/README.md) |
+| **08 — Cursor** | [modules/08-cursor/](modules/08-cursor/README.md) |
 
 [Full module list](modules/README.md)
 
