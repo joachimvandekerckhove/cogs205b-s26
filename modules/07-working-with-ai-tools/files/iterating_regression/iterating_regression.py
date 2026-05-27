@@ -12,9 +12,9 @@ Usage:
     python iterating_regression.py
 """
 
+import shutil
 import subprocess
 import sys
-import shutil
 from pathlib import Path
 
 # Allow running from this directory without installing the package.
@@ -22,11 +22,13 @@ _FILES_DIR = Path(__file__).resolve().parent.parent
 if str(_FILES_DIR) not in sys.path:
     sys.path.insert(0, str(_FILES_DIR))
 
+from agent_loop_helpers import build_prompt  # noqa: E402
 from gemini_simple_api import GeminiSimpleAPI  # noqa: E402
 
 TASK_DIR = Path(__file__).parent
 TEST_DIR = TASK_DIR / "tests"
 TEST_FILE = TEST_DIR / "test_regression.py"
+SOURCE_FILE = TASK_DIR / "regression.py"
 
 # Set test_regression.py to read-only(!)
 # Note this won't do anything if the agent can run as root.
@@ -35,19 +37,19 @@ TEST_FILE.chmod(0o444)
 # Modifiable parameters
 
 MAX_ATTEMPTS = 10
-INCLUDE_TEST_FILE = False
+INCLUDE_SOURCE_FILE = True
+INCLUDE_TEST_FILE = True
 USE_GOOD_PROMPT = True
-
-
 
 if USE_GOOD_PROMPT:
     PROMPT_FILE = TASK_DIR / "prompt.txt"
 else:
     PROMPT_FILE = TASK_DIR / "bad-prompt.txt"
 
+
 def run_tests() -> tuple[int, str]:
     result = subprocess.run(
-        ["python3", "-m", "unittest", "discover", "-s", TEST_DIR],
+        [sys.executable, "-m", "unittest", "discover", "-s", str(TEST_DIR)],
         cwd=TASK_DIR,
         capture_output=True,
         text=True,
@@ -62,37 +64,45 @@ client = GeminiSimpleAPI(
     protected_directories=[TEST_DIR],
 )
 
-prompt_text = PROMPT_FILE.read_text()
+base_prompt = PROMPT_FILE.read_text()
 
 for attempt in range(1, MAX_ATTEMPTS + 1):
     print(f"\n=== Attempt {attempt} ===")
-    files, notes = client.prompt(
-        prompt=prompt_text,
-        attachments=[TEST_FILE] if INCLUDE_TEST_FILE else [],
-        verbose=True,
+
+    prompt_text = build_prompt(
+        base_prompt,
+        project_dir=TASK_DIR,
+        source_file=SOURCE_FILE,
+        attempt=attempt,
     )
 
-    # Here you could re-insert the test file if it was modified.
+    attachments = []
+    if INCLUDE_SOURCE_FILE and SOURCE_FILE.is_file():
+        attachments.append(SOURCE_FILE)
+    if INCLUDE_TEST_FILE and TEST_FILE.is_file():
+        attachments.append(TEST_FILE)
+
+    files, notes = client.prompt(
+        prompt=prompt_text,
+        attachments=attachments,
+        verbose=True,
+    )
 
     code, output = run_tests()
     print(f"Output: {output}")
 
-    # Archive the attempt
-    (TASK_DIR / f"attempt_{attempt}").mkdir(parents=True, exist_ok=True)
-    (TASK_DIR / f"attempt_{attempt}" / "output.txt").write_text(output)
-    (TASK_DIR / f"attempt_{attempt}" / "prompt.txt").write_text(prompt_text)
+    attempt_dir = TASK_DIR / f"attempt_{attempt}"
+    attempt_dir.mkdir(parents=True, exist_ok=True)
+    (attempt_dir / "output.txt").write_text(output)
+    (attempt_dir / "prompt.txt").write_text(prompt_text)
+    if notes:
+        (attempt_dir / "notes.txt").write_text(notes)
     for file in files:
-        shutil.copy(file, TASK_DIR / f"attempt_{attempt}" / file.name)
+        shutil.copy(file, attempt_dir / file.name)
 
-    # input("Press Enter to continue...")
     if code == 0:
         print(f"\nTests passed on attempt {attempt}.")
         break
-    prompt_text += (
-        f"\n\n## Attempt {attempt} failed\n"
-        f"```\n{output}\n```\n"
-        "Fix the failures above."
-    )
 else:
     print(f"\nStopped after {MAX_ATTEMPTS} attempts; tests still failing.")
     sys.exit(1)

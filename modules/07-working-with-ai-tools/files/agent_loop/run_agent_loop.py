@@ -23,6 +23,7 @@ _FILES_DIR = Path(__file__).resolve().parent.parent
 if str(_FILES_DIR) not in sys.path:
     sys.path.insert(0, str(_FILES_DIR))
 
+from agent_loop_helpers import build_prompt  # noqa: E402
 from gemini_simple_api import GeminiSimpleAPI  # noqa: E402
 
 SCRIPT_DIR = Path(__file__).parent
@@ -48,7 +49,7 @@ for test_path in TEST_DIR.glob("test_*.py"):
 
 def run_tests() -> tuple[int, str]:
     result = subprocess.run(
-        ["python3", "-m", "unittest", "discover", "-s", str(TEST_DIR)],
+        [sys.executable, "-m", "unittest", "discover", "-s", str(TEST_DIR)],
         cwd=PROJECT_DIR,
         capture_output=True,
         text=True,
@@ -63,10 +64,17 @@ client = GeminiSimpleAPI(
     protected_directories=[TEST_DIR],
 )
 
-prompt_text = PROMPT_FILE.read_text()
+base_prompt = PROMPT_FILE.read_text()
 
 for attempt in range(1, MAX_ATTEMPTS + 1):
     print(f"\n=== Attempt {attempt} ===")
+
+    prompt_text = build_prompt(
+        base_prompt,
+        project_dir=PROJECT_DIR,
+        source_file=SOURCE_FILE,
+        attempt=attempt,
+    )
 
     attachments = []
     if INCLUDE_SOURCE_FILE and SOURCE_FILE.is_file():
@@ -88,6 +96,8 @@ for attempt in range(1, MAX_ATTEMPTS + 1):
     attempt_dir.mkdir(parents=True, exist_ok=True)
     (attempt_dir / "output.txt").write_text(output)
     (attempt_dir / "prompt.txt").write_text(prompt_text)
+    if notes:
+        (attempt_dir / "notes.txt").write_text(notes)
     for file in files:
         shutil.copy(file, attempt_dir / file.name)
 
@@ -95,11 +105,6 @@ for attempt in range(1, MAX_ATTEMPTS + 1):
     if code == 0:
         print(f"\nTests passed on attempt {attempt}.")
         break
-    prompt_text += (
-        f"\n\n## Attempt {attempt} failed\n"
-        f"```\n{output}\n```\n"
-        "Fix the failures above."
-    )
 else:
     print(f"\nStopped after {MAX_ATTEMPTS} attempts; tests still failing.")
     sys.exit(1)

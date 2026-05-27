@@ -18,6 +18,7 @@ MODEL_LIST = [
     "gemini-3-flash-preview",
     "gemini-2.5-pro",
     "gemini-2.5-computer-use-preview-10-2025",
+    "gemini-3.1-flash-lite",
     "gemini-3.1-pro-preview",
     "gemini-3.1-pro-preview-customtools",
     "gemma-4-26b-a4b-it",
@@ -155,6 +156,10 @@ class GeminiSimpleAPI:
         env_key = os.environ.get("GEMINI_API_KEY", "").strip()
         if env_key:
             return env_key
+        if api_key_file is None:
+            raise FileNotFoundError(
+                "Missing API key: set GEMINI_API_KEY or pass api_key_file"
+            )
         if not isinstance(api_key_file, Path):
             api_key_file = Path(api_key_file)
         if not api_key_file.is_file():
@@ -286,6 +291,8 @@ class GeminiSimpleAPI:
         """
         if verbose:
             print(f"Prompt: {prompt}")
+            if attachments:
+                print(f"Attachments: {attachments}")
         content = self.generate_content_structured(prompt, attachments=attachments)
         files = content["files"]
         notes = content.get("notes", "")
